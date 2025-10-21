@@ -63,7 +63,7 @@ viewWithdrawalThreshold(): Retorna el límite de retiro por transacción.
 
 viewBankCapacity(): Retorna la capacidad total del banco.
 
-*Notas importantes y trade-off*
+*Notas importantes y trade-off:*
 Dépositos de ETH usan address(0) como token.
 Para poder llevar toda la contabilidad interna del contrato en USD y de esta manera poder comparar si la capacidad habia sido sobrepasada, se debio pasar todos los tokens ingresados a USD y almacenarlos de esta manera, esto conlleva un problema en el momento en que un usuario intente realizar un retiro porque el precio del token pudo haber variado, por lo tanto, en el momento de retiro se realiza una consulta para saber cuanto vale en ese momento el token que desea retirar y si la cantidad de dolares de ese token que el usuario tiene permitiria esa operación.
 Cada usuario tiene varios tokens asociados a él, el valor de los tokens no se suman, son todos considerados diferentes.
